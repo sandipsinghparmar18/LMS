@@ -15,7 +15,7 @@ router.route("/register").post(register);
 router.route("/login").post(login);
 router.route("/logout").get(logout);
 router.route("/profile").get(verifyJWT, getUserProfile);
-router.route("/profile/update").put(
+router.route("/profile/update").patch(
     verifyJWT, 
     upload.single("profilePhoto"), 
     updateProfile);
